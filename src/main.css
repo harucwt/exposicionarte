@@ -1,0 +1,41 @@
+:root {
+	color-scheme: dark;
+	background: #090711;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+	overflow: hidden;
+	background: #090711;
+}
+
+.exhibition-background {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	height: 100vh;
+	height: 100dvh;
+	overflow: hidden;
+	background:
+		radial-gradient(ellipse at 30% 65%, rgba(180, 151, 207, 0.12), transparent 48%),
+		radial-gradient(ellipse at 72% 36%, rgba(82, 39, 255, 0.1), transparent 42%),
+		#090711;
+}
+
+.liquid-ether {
+	width: 100%;
+	height: 100%;
+}
