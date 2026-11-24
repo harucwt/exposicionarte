@@ -1,5 +1,7 @@
 import { build } from 'esbuild';
+import { generatePaintingPages } from './generate-painting-pages.mjs';
 
+await generatePaintingPages();
 await build({
 	entryPoints: ['src/main.jsx'],
 	bundle: true,

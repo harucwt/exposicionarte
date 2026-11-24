@@ -1,5 +1,7 @@
 :root {
 	color-scheme: dark;
+	font-family: "Segoe UI", sans-serif;
+	color: #f7f1fb;
 	background: #090711;
 }
 
@@ -22,20 +24,102 @@ body {
 	background: #090711;
 }
 
-.exhibition-background {
+.ether-layer {
 	position: fixed;
 	inset: 0;
+	z-index: 0;
 	width: 100%;
 	height: 100vh;
 	height: 100dvh;
 	overflow: hidden;
-	background:
-		radial-gradient(ellipse at 30% 65%, rgba(180, 151, 207, 0.12), transparent 48%),
-		radial-gradient(ellipse at 72% 36%, rgba(82, 39, 255, 0.1), transparent 42%),
-		#090711;
+	pointer-events: none;
 }
 
 .liquid-ether {
 	width: 100%;
 	height: 100%;
+}
+
+.gallery-home {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	min-height: 100vh;
+	min-height: 100dvh;
+	grid-template-rows: auto minmax(0, 1fr) auto;
+	align-items: center;
+	justify-items: center;
+	gap: 0.35rem;
+	padding:
+		max(18px, env(safe-area-inset-top, 0px))
+		max(18px, env(safe-area-inset-right, 0px))
+		max(16px, env(safe-area-inset-bottom, 0px))
+		max(18px, env(safe-area-inset-left, 0px));
+	text-align: center;
+}
+
+.gallery-heading {
+	width: min(100%, 760px);
+	padding-top: clamp(0px, 2vh, 18px);
+}
+
+.gallery-eyebrow {
+	margin: 0 0 0.55rem;
+	color: #e8c1f3;
+	font-size: 0.72rem;
+	font-weight: 650;
+	letter-spacing: 0.24em;
+	text-transform: uppercase;
+}
+
+.gallery-heading h1 {
+	margin: 0;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: clamp(2.2rem, 5vw, 4rem);
+	font-weight: 400;
+	line-height: 1.05;
+	text-shadow: 0 2px 24px rgba(8, 4, 17, 0.7);
+}
+
+.gallery-instructions {
+	margin: 0.75rem 0 0;
+	color: rgba(247, 241, 251, 0.76);
+	font-size: clamp(0.82rem, 1.5vw, 1rem);
+	text-shadow: 0 1px 12px rgba(8, 4, 17, 0.85);
+}
+
+.gallery-carousel {
+	width: min(100%, 1120px);
+	height: clamp(330px, 61vh, 560px);
+	height: clamp(330px, 61dvh, 560px);
+	min-height: 0;
+}
+
+.gallery-count {
+	margin: 0.3rem 0 0;
+	color: rgba(247, 241, 251, 0.64);
+	font-size: 0.78rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+@media (max-height: 620px) {
+	.gallery-home {
+		gap: 0;
+	}
+
+	.gallery-heading {
+		padding-top: 0;
+	}
+
+	.gallery-carousel {
+		height: min(58vh, 390px);
+		height: min(58dvh, 390px);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.gallery-home {
+		scroll-behavior: auto;
+	}
 }

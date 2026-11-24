@@ -1,0 +1,90 @@
+:root {
+	color-scheme: dark;
+	font-family: "Segoe UI", sans-serif;
+	color: #f7f1fb;
+	background: #090711;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: grid;
+	min-width: 320px;
+	min-height: 100vh;
+	min-height: 100dvh;
+	margin: 0;
+	padding: max(20px, env(safe-area-inset-top, 0px)) max(20px, env(safe-area-inset-right, 0px)) max(20px, env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left, 0px));
+	place-items: center;
+	background:
+		radial-gradient(ellipse at 25% 35%, rgba(82, 39, 255, 0.14), transparent 44%),
+		radial-gradient(ellipse at 75% 70%, rgba(255, 159, 252, 0.12), transparent 42%),
+		#090711;
+}
+
+.painting-back {
+	position: fixed;
+	top: max(20px, env(safe-area-inset-top, 0px));
+	left: max(20px, env(safe-area-inset-left, 0px));
+	color: #e7c2ef;
+	font-size: 0.9rem;
+	text-decoration: none;
+}
+
+.painting-back:hover,
+.painting-back:focus-visible {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.painting-detail {
+	display: grid;
+	width: min(100%, 1080px);
+	grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
+	align-items: center;
+	gap: clamp(28px, 6vw, 72px);
+}
+
+.painting-image {
+	overflow: hidden;
+	border: 1px solid rgba(238, 219, 255, 0.18);
+	border-radius: 4px;
+	background: #171020;
+	box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+}
+
+.painting-image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.painting-number {
+	color: #d6a9e7;
+	font-size: 0.75rem;
+	font-weight: 650;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+
+.painting-info h1 {
+	margin: 0;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: clamp(2.2rem, 6vw, 4.5rem);
+	font-weight: 400;
+}
+
+.painting-placeholder {
+	max-width: 32ch;
+	color: rgba(247, 241, 251, 0.68);
+	line-height: 1.7;
+}
+
+@media (max-width: 680px) {
+	.painting-detail {
+		grid-template-columns: 1fr;
+		gap: 22px;
+		padding-top: 48px;
+	}
+}
