@@ -12,3 +12,14 @@ await build({
 	outfile: 'menu.bundle.js',
 	loader: { '.css': 'css' }
 });
+
+await build({
+	entryPoints: ['src/PaintingDetail.jsx'],
+	bundle: true,
+	minify: true,
+	format: 'iife',
+	jsx: 'automatic',
+	target: ['es2019'],
+	outfile: 'painting-detail.bundle.js',
+	loader: { '.css': 'css' }
+});
