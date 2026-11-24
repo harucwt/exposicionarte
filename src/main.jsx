@@ -72,13 +72,6 @@ function App() {
 				/>
 			</div>
 			<main className="gallery-home">
-				<header className="gallery-heading">
-					<p className="gallery-eyebrow">Exposición de arte</p>
-					<h1>Obras por descubrir</h1>
-					<p className="gallery-instructions">
-						Desliza para recorrer el catálogo y selecciona una pintura para abrir su ficha.
-					</p>
-				</header>
 				<section className="gallery-carousel" aria-label="Catálogo de pinturas">
 					<FlexCarousel
 						items={carouselPaintings}
@@ -107,7 +100,6 @@ function App() {
 						onSelect={openPainting}
 					/>
 				</section>
-				<p className="gallery-count">{paintings.length} pinturas en el catálogo</p>
 			</main>
 		</>
 	);
