@@ -1,11 +1,5 @@
 # Exposición de arte
 
-Fondo animado AeroShards para la exposición. La escena usa WebGPU y requiere
-un navegador compatible.
-
-## Desarrollo
-
-```bash
-npm install
-npm run dev
-```
+Fondo animado de fragmentos de vidrio en `index.html`. Está implementado con
+Canvas 2D y no requiere instalar dependencias; abre el archivo directamente en
+un navegador moderno.
